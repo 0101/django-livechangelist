@@ -1,0 +1,1 @@
+recursive-include django_livechangelist *.py *.coffee *.js
