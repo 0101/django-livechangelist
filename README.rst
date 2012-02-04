@@ -7,9 +7,11 @@ Automatically updated changelist page in the django admin via JavaScript polling
 Installation
 ------------
 
+::
+
     pip install -e git+git://github.com/0101/django-livechangelist#egg=django-livechangelist
 
-or just put the django_livechangelist directory on your PYTHONPATH.
+or just put the django_livechangelist directory on your ``PYTHONPATH``.
 
 
 Configuration
@@ -23,7 +25,7 @@ Configuration
 Usage
 -----
 
-In ``yourapp/admin.py``:
+In ``yourapp/admin.py``::
 
     from django_livechangelist import LiveChangelistAdmin
 
@@ -32,20 +34,20 @@ In ``yourapp/admin.py``:
 
         # optionally, you can override these methods:
 
-		def live_changelist_update_interval(self, request):
-			"""
-			Delay between change list updates in milliseconds.
-			"""
-			return 1000
+        def live_changelist_update_interval(self, request):
+            """
+            Delay between change list updates in milliseconds.
+            """
+            return 1000
 
-		def live_changelist_filter(self, request, qs):
-			"""
-			Override this method to filter which objects you want to live-update.
+        def live_changelist_filter(self, request, qs):
+            """
+            Override this method to filter which objects you want to live-update.
 
-			E.g. maybe only objects in a specific state can actually change,
-			so filtering out the rest can save some server resources.
-			"""
-			return qs
+            E.g. maybe only objects in a specific state can actually change,
+            so filtering out the rest can save some server resources.
+            """
+            return qs
 
 
 That should be it.
