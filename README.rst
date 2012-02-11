@@ -11,7 +11,7 @@ Installation
 
     pip install -e git+git://github.com/0101/django-livechangelist#egg=django-livechangelist
 
-or just put the django_livechangelist directory on your ``PYTHONPATH``.
+or just put the ``django_livechangelist`` directory on your ``PYTHONPATH``.
 
 
 Configuration
@@ -57,7 +57,7 @@ Notes
 -----
 
 * Only the rows you see when you load the page will be updated. If some objects
-  are created of deleted that will not be visible.
+  are created or deleted that will not be visible.
 
 * Editable fields are not updated.
 
