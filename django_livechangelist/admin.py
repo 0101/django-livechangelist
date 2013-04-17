@@ -1,8 +1,13 @@
-from django.conf.urls.defaults import patterns
 from django.contrib import admin
 from django.contrib.admin.templatetags.admin_list import items_for_result
 from django.http import HttpResponseBadRequest, HttpResponse
 from django.utils import simplejson as json
+
+try:
+    from django.conf.urls import patterns
+except ImportError:
+    # pre django 1.4
+    from django.conf.urls.defaults import patterns
 
 
 class LiveChangelistAdmin(admin.ModelAdmin):
