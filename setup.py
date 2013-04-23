@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-livechangelist',
-    version='0.1',
+    version='0.2',
     url='https://github.com/0101/django-livechangelist',
     description=('Automatically updated changelist page in the django '
                  'admin via JavaScript polling.'),
