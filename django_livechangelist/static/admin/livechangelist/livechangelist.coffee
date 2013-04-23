@@ -1,6 +1,6 @@
 update_url = 'live_changelist_update'
 
-pk_href_re = /^([^\/]+)\/$/
+pk_href_re = /([^\/]+)\/$/
 
 
 django.jQuery ($) ->
