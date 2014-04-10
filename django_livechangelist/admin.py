@@ -1,7 +1,8 @@
+import json
+
 from django.contrib import admin
 from django.contrib.admin.templatetags.admin_list import items_for_result
 from django.http import HttpResponseBadRequest, HttpResponse
-from django.utils import simplejson as json
 
 try:
     from django.conf.urls import patterns
@@ -59,7 +60,7 @@ class LiveChangelistAdmin(admin.ModelAdmin):
         actions = self.get_actions(request)
         if actions:
             # Add the action checkboxes if there are any actions available.
-            list_display = ['action_checkbox'] +  list(list_display)
+            list_display = ['action_checkbox'] + list(list_display)
 
         ChangeList = self.get_changelist(request)
         cl = ChangeList(request, self.model, list_display,
